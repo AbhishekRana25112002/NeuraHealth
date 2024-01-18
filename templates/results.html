@@ -1,0 +1,47 @@
+{% extends 'master.html' %}
+{% load static %}
+{% block title %}
+    Predicting Lung Cancer
+{% endblock %}
+
+{% block body %}
+
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+    <br><br><br><br><br><br> 
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-xl-5 col-lg-6 position-relative">
+            <img src = "{{image}}" alt="Description of the image" height="500" width="700">
+        </div>
+
+        <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+          <h3>{{name}}</h3>
+          <p>We provide the probablity of different classes</p>
+
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-fingerprint"></i></div>
+            <h4 class="title"><a href="">Lung SCC (Squamous Cell Carcinoma):</a></h4>
+            <p class="description">The probablity of lung ssc is {{lung_scc}} %</p>
+          </div>
+
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-gift"></i></div>
+            <h4 class="title"><a href="">Lung N (Normal):</a></h4>
+            <p class="description">The probablity of lung n is {{lung_n}} %</p>
+          </div>
+
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-atom"></i></div>
+            <h4 class="title"><a href="">Lung ACA (Adenocarcinoma):</a></h4>
+            <p class="description">The probablity of lung aca is {{lung_aca}} %</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End About Section -->
+
+{% endblock %}
